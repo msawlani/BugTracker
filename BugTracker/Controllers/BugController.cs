@@ -27,7 +27,7 @@ namespace BugTracker.Controllers
 
         // GET api/<BugController>/5
         [HttpGet("{id}")]
-        public ActionResult<Bug> GetBugByID(int id)
+        public ActionResult<Bug> GetBugByID(Guid id)
         {
              var bug = _bugContext.Bug.Find(id);
 
@@ -44,6 +44,7 @@ namespace BugTracker.Controllers
         [HttpPost]
         public ActionResult<Bug> CreateBug(Bug bug)
         {
+            Console.WriteLine(bug);
             _bugContext.Bug.Add(bug);
             _bugContext.SaveChanges();
 
