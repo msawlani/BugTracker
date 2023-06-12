@@ -2,7 +2,7 @@
 {
     public class Bug
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string? Project { get; set; }
         public string? Type { get; set; }
         public string? Assignee { get; set; }
